@@ -1,0 +1,85 @@
+.zenmenu{
+width:980;
+font: bold 11px Verdana;
+}
+
+.zenmenu a {font: bold 15px Verdana;}
+
+.zenmenu:after{ /*Add margin between menu and rest of content in Firefox*/
+content: "."; 
+display: block; 
+height: 0; 
+clear: both; 
+visibility: hidden;
+}
+
+.zenmenu ul{
+width: 703;
+background: url(/nj/eBiz/images/navbg.gif) center center repeat-x; /*THEME CHANGE HERE*/
+padding: 9px 9px 14px 9px;
+margin: 0;
+text-align: center; /*set value to "left", "center", or "right"*/
+}
+
+.zenmenu ul li{
+display: inline;
+
+}
+
+.zenmenu ul li a{
+color: #ffffff;
+padding: 3px 9px  ;
+
+margin: 0;
+text-decoration: none;
+
+}
+
+.zenmenu ul li a:hover{
+background: url(/nj/eBiz/images/navbg-over.gif) center center repeat-x; /*THEME CHANGE HERE*/
+}
+
+.zenmenu ul li a[rel]:after{ /*HTML to indicate drop down link*/
+content: "";
+/*content: " " url(downimage.gif); /*uncomment this line to use an image instead*/
+}
+
+
+/* ######### Style for Drop Down Menu ######### */
+
+.dropmenudiv{
+position:absolute;
+text-align:left; /*added this later to keep from centering dropdown text*/
+top: 0;
+border: 1px solid #88B3CC; /*border color around dropdowns*/
+border-bottom-width: 0;
+font: normal 11px Verdana;
+line-height:18px;
+z-index:100;
+background-color: white;
+width: 200px;
+visibility: hidden;
+}
+
+
+.dropmenudiv a{
+width: auto;
+display: block;
+text-indent: 3px;
+border-bottom: 1px solid #BBB; /*THEME CHANGE HERE*/
+padding: 2px 0 ;
+text-decoration: none;
+font: normal 11px Verdana;
+font-weight: bold;
+//color: #1B5A8D;  /*Color of text in dropdown changed to black ccp 03/12/2012*/
+color: black;
+}
+
+* html .dropmenudiv a{ /*IE only hack*/
+width: 100%;
+}
+
+.dropmenudiv a:hover{ /*Hover color in dropdown*/
+background: url(/nj/eBiz/images/dropdownbg.gif) center center repeat-x; /*THEME CHANGE HERE*/
+
+}
